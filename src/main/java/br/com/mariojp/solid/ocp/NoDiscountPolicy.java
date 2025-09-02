@@ -5,6 +5,6 @@ public class NoDiscountPolicy implements DiscountPolicy {
     private NoDiscountPolicy() {}
     @Override
     public double apply(double amount) {
-        return amount; // sem desconto
+        return amount; 
     }
 }
