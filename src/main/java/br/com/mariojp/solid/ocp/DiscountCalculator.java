@@ -7,7 +7,6 @@ public class DiscountCalculator {
 
     private final Map<CustomerType, DiscountPolicy> policies;
 
-    // 🔹 Construtor usado nos testes (sem parâmetros)
     public DiscountCalculator() {
         this.policies = Map.of(
             CustomerType.REGULAR, new RegularPolicy(),
@@ -16,7 +15,6 @@ public class DiscountCalculator {
         );
     }
 
-    // 🔹 Construtor flexível para injeção (extensível via OCP)
     public DiscountCalculator(Map<CustomerType, DiscountPolicy> policies) {
         this.policies = Objects.requireNonNull(policies, "policies must not be null");
     }
